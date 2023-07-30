@@ -9,9 +9,19 @@ body{
 :root{
      --kudaPurple:#40196D;
      --shadow: 0px 3px 10px 0px rgba(79,78,78,0.1);
+     --ultraLightGray:#F7F7F7;
      --lightGray:#A0A0A0;
      --flagBg:#B2DBCA;
      --film:rgba(64,25,109,0.2);
      --mildRound:5px;
      --fullRound:10px;
+}
+
+.film{
+     width: 100vw;
+     height: 100vh;
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     background-color: var(--film);
 }

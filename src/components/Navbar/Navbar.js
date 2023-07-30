@@ -1,20 +1,48 @@
-import React from 'react'
+import React, {useContext,memo} from 'react'
 import './navbar.css'
 import Logo from '../../assets/kudaLogo.png'
-import { flags } from '../../data'
+import { flags,personalItems, businessItems, companyItems, helpItems } from '../../data'
+import Navlink from '../Navlink/Navlink'
+import { KudaContexts } from '../../App'
+
+
 
 const [ngn] = flags;
 
 
 const Navbar = () => {
+  
+  const{activeLink,setActiveLink} = useContext(KudaContexts);
+
   return (
     <div className='navbar'>
       <img src={Logo} alt='logo' className='kudaLogo' />
       <div className='navLinksHolder'>
-        <p>Personal</p>
-        <p>Business</p>
-        <p>Company</p>
-        <p>Help</p>
+        <Navlink
+          title='Personal'
+          double
+          items={activeLink === "personal" ? personalItems : []}
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+        />
+        <Navlink
+          title='Business'
+          items={activeLink === "business" ? businessItems : []}
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+        />
+        <Navlink
+          title='Company'
+          items={activeLink === "company" ? companyItems : []}
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+        />
+        <Navlink
+          title='Help'
+          items={activeLink === "help" ? helpItems : []}
+          activeLink={activeLink}
+          setActiveLink={setActiveLink}
+        />
       </div>
       <div className='miscLinks'>
         <p>Sign In</p>
@@ -27,4 +55,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar
+export default memo(Navbar);

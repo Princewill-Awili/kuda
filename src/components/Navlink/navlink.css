@@ -1,0 +1,37 @@
+.navlink {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+.navlinkTitle {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 10px;
+}
+
+.navlinkList {
+  display: flex;
+   flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50px;
+  border-radius: var(--mildRound);
+  background-color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+

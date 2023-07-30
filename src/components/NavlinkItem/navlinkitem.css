@@ -1,0 +1,25 @@
+.navlinkitem {
+  width: 180px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.iconBubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--ultraLightGray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navlinkitemTxt{
+  color: black;
+}
+.navlinkitemTxt:hover{
+  color:var(--kudaPurple);
+}
