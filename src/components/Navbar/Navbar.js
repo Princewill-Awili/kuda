@@ -14,6 +14,7 @@ import MobileNavlink from "../MobileNavlink/MobileNavlink";
 import { KudaContexts } from "../../App";
 import {HiOutlineMenuAlt4 as MenuIcon} from 'react-icons/hi'
 import {GrClose as CloseIcon} from 'react-icons/gr'
+import {IoIosArrowBack as BackArrow} from 'react-icons/io'
 
 
 const [ngn] = flags;
@@ -21,6 +22,11 @@ const [ngn] = flags;
 const Navbar = () => {
   const { activeLink, setActiveLink} = useContext(KudaContexts);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [openNavItems, setOpenNavItems] = useState(false);
+
+  const toggleMobileNav =()=>{
+    setMobileNavOpen(!mobileNavOpen)
+  }
 
 
 
@@ -55,30 +61,86 @@ const Navbar = () => {
         />
       </div>
       <div className='miscLinks'>
-        <p>Sign In</p>
+        <p className='signInLink'>Sign In</p>
         <div className='joinKuda'>Join Kuda</div>
-        <div className='flagHolder'>
-          <img src={ngn} alt='flag' className='flag' />
-        </div>
+        {mobileNavOpen === false && (
+          <div className='flagHolder'>
+            <img src={ngn} alt='flag' className='flag' />
+          </div>
+        )}
+
         <div className='menuIconHolder'>
-          <MenuIcon className='menuIcon' />
-          {mobileNavOpen && <CloseIcon className='closeIcon' />}
+          {mobileNavOpen === false && (
+            <MenuIcon className='menuIcon' onClick={toggleMobileNav} />
+          )}
+          {mobileNavOpen && (
+            <CloseIcon className='closeIcon' onClick={toggleMobileNav} />
+          )}
         </div>
       </div>
       {mobileNavOpen && (
         <div className='mobileNavbar'>
           <div className='topNavbar'>
-            <div className='joinKuda'>Join Kuda</div>
-            <div className='joinKuda signInBtn'>Sign In</div>
+            <div className='mobileJoinKuda'>Join Kuda</div>
+            <div className='mobileJoinKuda signInBtn'>Sign In</div>
           </div>
           <ul className='mobileNavlinkList'>
-            <MobileNavlink title='Personal' items={personalItems} />
-            <MobileNavlink title='Business' items={businessItems} />
-            <MobileNavlink title='Company' items={companyItems} />
-            <MobileNavlink title='Developers' />
-            <MobileNavlink title='Contact Us' />
-            <MobileNavlink title='Help' items={helpItems} />
+            <MobileNavlink
+              title='Personal'
+              items={personalItems}
+              openNavItems={openNavItems}
+              setOpenNavItems={setOpenNavItems}
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            />
+            <MobileNavlink
+              title='Business'
+              items={businessItems}
+              openNavItems={openNavItems}
+              setOpenNavItems={setOpenNavItems}
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            />
+            <MobileNavlink
+              title='Company'
+              items={companyItems}
+              openNavItems={openNavItems}
+              setOpenNavItems={setOpenNavItems}
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            />
+            <MobileNavlink
+              title='Developers'
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            />
+            <MobileNavlink
+              title='Contact Us'
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            />
+            <MobileNavlink
+              title='Help'
+              items={helpItems}
+              openNavItems={openNavItems}
+              setOpenNavItems={setOpenNavItems}
+              activeLink={activeLink}
+              setActiveLink={setActiveLink}
+            />
           </ul>
+          {openNavItems && (
+            <div className='navItemsArea'>
+              <div className='navItemsAreaTop'>
+                <BackArrow onClick={() => setOpenNavItems(false)} />
+                <span
+                  className='backBtn'
+                  onClick={() => setOpenNavItems(false)}
+                >
+                  Back
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{memo} from 'react'
 import './landingpage.css'
 
 import { badges } from '../../data'
@@ -37,4 +37,4 @@ const LandingPage = () => {
   );
 }
 
-export default LandingPage
+export default memo(LandingPage);
