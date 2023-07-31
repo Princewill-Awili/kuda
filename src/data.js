@@ -1,8 +1,17 @@
+//flags
 import ngn from "./assets/flags/ngn flag.png";
 import gh from "./assets/flags/ghflag.png";
 import uk from "./assets/flags/ukflag.png";
 import ken from "./assets/flags/kenflag.png";
 import rwa from "./assets/flags/rwandaflag.png";
+
+//badges
+import appleStoreBadge from './assets/applestore badge.png';
+import playStoreBadge from './assets/googleplay badge.png';
+import ndicBadge from './assets/ndic badge.jpg'
+import cbnBadge from './assets/cbn badge.png'
+
+
 
 //icons
 import { AiFillHome as HomeIcon } from "react-icons/ai";
@@ -62,3 +71,5 @@ export const helpItems = [
      {name:"Contact Us"},
      {name:"Self Help"}
 ];
+
+export const badges = [appleStoreBadge, playStoreBadge, ndicBadge, cbnBadge];

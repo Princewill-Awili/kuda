@@ -1,0 +1,80 @@
+.landingpage{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     padding-top: 70px;
+}
+
+.sectionOne,.sectionTwo{
+     width: 100%;
+     height: 100vh;
+     display: flex;
+}
+
+.sectionOne{
+     flex-direction: row;
+}
+
+.secOneLeft,.secOneRight{
+     width: 50%;
+     height: 100%;
+     display: flex;
+     align-items:center;
+     justify-content: flex-start;
+}
+
+.secOneTxtBox{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 65%;
+     margin-left: 50px;
+}
+
+.bigTxt{
+     font-size: 45px;
+     margin-bottom: 20px;
+     color: var(--kudaPurple);
+     font-weight: 600;
+}
+.medTxt{
+     font-size: 18px;
+     line-height:26px;
+     color: var(--mildBlack);
+     font-weight: 500;
+}
+
+.badges{
+     display: flex;
+     width: 100%;
+     height: 100px;
+     flex-direction: column;
+}
+
+.apple, .google{
+     height: 70px;
+     width: 48%;
+     margin-right: 2%;
+     border-radius: var(--mildRound);
+}
+
+.ndic, .cbn{
+     height: 40px;
+}
+
+
+
+.topBadge, .bottomBadge{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     gap:5px;
+}
+
+.bottomBadge{
+     margin-top: 10px;
+     justify-content: space-between;
+     padding: 0px 20px;
+}

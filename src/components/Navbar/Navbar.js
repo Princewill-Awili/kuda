@@ -1,21 +1,25 @@
-import React, {useContext,memo} from 'react'
-import './navbar.css'
-import Logo from '../../assets/kudaLogo.png'
-import { flags,personalItems, businessItems, companyItems, helpItems } from '../../data'
-import Navlink from '../Navlink/Navlink'
-import { KudaContexts } from '../../App'
-
-
+import React, { useContext, memo } from "react";
+import "./navbar.css";
+import Logo from "../../assets/kudaLogo.png";
+import {
+  flags,
+  personalItems,
+  businessItems,
+  companyItems,
+  helpItems,
+} from "../../data";
+import Navlink from "../Navlink/Navlink";
+import { KudaContexts } from "../../App";
 
 const [ngn] = flags;
 
-
 const Navbar = () => {
-  
-  const{activeLink,setActiveLink} = useContext(KudaContexts);
+  const { activeLink, setActiveLink} = useContext(KudaContexts);
 
   return (
-    <div className='navbar'>
+    <div
+      className='navbar'
+    >
       <img src={Logo} alt='logo' className='kudaLogo' />
       <div className='navLinksHolder'>
         <Navlink
@@ -53,6 +57,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default memo(Navbar);
