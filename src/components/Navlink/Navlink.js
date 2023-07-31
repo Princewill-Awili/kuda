@@ -14,13 +14,13 @@ const Navlink = ({ title, items, double, setActiveLink }) => {
       onMouseEnter={() => {
         setShowFilm(true);
         if(title==='Personal'){
-          setActiveLink('personal');
+          setActiveLink('Personal');
         }else if(title==='Business'){
-          setActiveLink('business')
+          setActiveLink('Business')
         }else if(title==='Company'){
-          setActiveLink('company')
+          setActiveLink('Company')
         }else if(title==='Help'){
-          setActiveLink('help')
+          setActiveLink('Help')
         }
         }} >
       <p className='navlinkTitle'>

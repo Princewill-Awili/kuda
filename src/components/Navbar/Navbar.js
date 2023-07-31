@@ -11,6 +11,7 @@ import {
 
 import Navlink from "../Navlink/Navlink";
 import MobileNavlink from "../MobileNavlink/MobileNavlink";
+import NavItemsDisplay from "../NavItemsDisplay/NavItemsDisplay";
 import { KudaContexts } from "../../App";
 import {HiOutlineMenuAlt4 as MenuIcon} from 'react-icons/hi'
 import {GrClose as CloseIcon} from 'react-icons/gr'
@@ -37,25 +38,25 @@ const Navbar = () => {
         <Navlink
           title='Personal'
           double
-          items={activeLink === "personal" ? personalItems : []}
+          items={activeLink === "Personal" ? personalItems : []}
           activeLink={activeLink}
           setActiveLink={setActiveLink}
         />
         <Navlink
           title='Business'
-          items={activeLink === "business" ? businessItems : []}
+          items={activeLink === "Business" ? businessItems : []}
           activeLink={activeLink}
           setActiveLink={setActiveLink}
         />
         <Navlink
           title='Company'
-          items={activeLink === "company" ? companyItems : []}
+          items={activeLink === "Company" ? companyItems : []}
           activeLink={activeLink}
           setActiveLink={setActiveLink}
         />
         <Navlink
           title='Help'
-          items={activeLink === "help" ? helpItems : []}
+          items={activeLink === "Help" ? helpItems : []}
           activeLink={activeLink}
           setActiveLink={setActiveLink}
         />
@@ -139,6 +140,7 @@ const Navbar = () => {
                   Back
                 </span>
               </div>
+              <NavItemsDisplay/>
             </div>
           )}
         </div>
