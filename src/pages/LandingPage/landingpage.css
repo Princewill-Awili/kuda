@@ -3,6 +3,7 @@
      flex-direction: column;
      width: 100%;
      padding-top: 70px;
+     z-index:inherit;
 }
 
 .sectionOne,.sectionTwo{
@@ -53,14 +54,14 @@
 }
 
 .apple, .google{
-     height: 70px;
+     height: 65px;
      width: 48%;
      margin-right: 2%;
      border-radius: var(--mildRound);
 }
 
 .ndic, .cbn{
-     height: 40px;
+     height: 30px;
 }
 
 
@@ -77,4 +78,10 @@
      margin-top: 10px;
      justify-content: space-between;
      padding: 0px 20px;
+}
+
+
+.sideTxt{
+     color: var(--lightGray);
+     font-size: 11px;
 }

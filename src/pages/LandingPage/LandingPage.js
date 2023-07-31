@@ -18,12 +18,14 @@ const LandingPage = () => {
             </p>
             <div className='badges'>
               <div className='topBadge'>
-                <img src={ndicBadge} alt="apple" className='apple' />
-                <img src={cbnBadge} alt="" className="google" />
+                <img src={ndicBadge} alt='apple' className='apple' />
+                <img src={cbnBadge} alt='' className='google' />
               </div>
               <div className='bottomBadge'>
-                <img src={appleStoreBadge} alt='apple' className='ndic' />
+                <p className='sideTxt'>Fully Licensed by the CBN</p>
                 <img src={playStoreBadge} alt='google' className='cbn' />
+                <p className='sideTxt'>Deposits insured by the</p>
+                <img src={appleStoreBadge} alt='apple' className='ndic' />
               </div>
             </div>
           </div>
