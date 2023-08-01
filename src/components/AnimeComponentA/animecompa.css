@@ -20,6 +20,7 @@
 .kudaphone{
      height:300px;
      transform: rotateZ(-20deg);  
+     z-index: 100;
 }
 .ringA{
      top: 0px;
@@ -31,6 +32,7 @@
      justify-content: center;
      border-radius: 50%;
      position: absolute;
+     z-index: 500;
 }
 .ringB{
      width: 500px;
@@ -44,6 +46,7 @@
      justify-content: center;
      border-radius: 50%;
      animation:rotator 8s 2.5s linear infinite;
+     z-index: 500;
 }
 
 .ringC{
@@ -57,6 +60,7 @@
      justify-content: center;
      border-radius: 50%;
      animation:rotator 8s linear infinite;
+     z-index: 500;
 }
 
 .ringD{
@@ -71,6 +75,7 @@
      justify-content: center;
      border-radius: 50%;
      animation:antirotator 8s linear infinite;
+     z-index: 500;
 }
 
 .rotatingBubble, .rotatingBubbleB, .rotatingBubbleC{

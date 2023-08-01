@@ -7,6 +7,7 @@ import {
   FaNetworkWired as NetworkIcon,
 } from "react-icons/fa";
 import { BsCreditCardFill as CardIcon, BsSendFill  as SendIcon} from "react-icons/bs";
+import {AiFillPieChart as PieIcon } from 'react-icons/ai'
 
 
 const [kudaphone] = images;
@@ -20,7 +21,7 @@ const AnimeCompA = () => {
         </div>
         <div className='ringB'>
           <div className='rotatingBubble'>
-            <SaveIcon className='rotatingIcon' />
+            <PieIcon className='rotatingIcon' />
           </div>
         </div>
         <div className='ringC'>

@@ -10,9 +10,7 @@
 .sectionOne,
 .sectionTwo {
   width: 100%;
-  height: 100vh;
   display: flex;
-  
 }
 
 .sectionOne {
@@ -95,4 +93,29 @@
 .secOneRight {
   margin-top: -10vh;
   padding-left: 10%;
+}
+
+@media screen and (max-width: 991px) {
+  .bigTxt {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .sectionOne {
+    flex-direction: column;
+    padding-top: 0vh;
+  }
+  .secOneLeft,
+  .secOneRight {
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .secOneTxtBox {
+    width: 70%;
+  }
 }
