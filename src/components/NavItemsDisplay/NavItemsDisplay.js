@@ -18,8 +18,8 @@ const NavItemsDisplay = () => {
       <p className='title'>{activeLink}</p>
       <ul className='navitemsdisplayList'>
         {activeLink === "Personal"
-          ? personalItems.map((item) => (
-              <NavlinkItem name={item.name} icon={item.icon} display />
+          ? personalItems.map((item,index) => (
+              <NavlinkItem key={index} name={item.name} icon={item.icon} display />
             ))
           : []}
         {activeLink === "Business"

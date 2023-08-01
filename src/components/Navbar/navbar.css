@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  height: 70px;
+  height: 15vh;
   box-shadow: var(--shadow);
   display: flex;
   position: fixed;
@@ -91,7 +91,7 @@
   position: absolute;
   left: 0px;
   top: 0px;
-  padding: 70px 10% 0px 5% ;
+  padding: 15vh 10% 0px 5% ;
   flex-direction: column;
   align-items:left;
   justify-content:flex-start;
@@ -139,15 +139,19 @@
 
 .mobileNavLink{
   width: 100%;
-  height: 70px;
+  height: 10vh;
   color: var(--kudaPurple);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--lightGray);
   cursor: pointer;
+}
+
+.mobileNavLink>span{
+  font-size: 1.5em;
 }
 
 .arrowRight{
@@ -169,7 +173,7 @@
 
 .navItemsAreaTop{
   width: 100%;
-  height: 70px;
+  height: 15vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -177,6 +181,8 @@
 
 .backBtn{
   cursor: pointer;
+  font-size: 2em;
+  margin-left: 5px;
 }
 
 /*********************MEDIA QUERIES*****************************/
@@ -187,16 +193,59 @@
     padding-right: 50px;
     justify-content: space-between;
   }
+  .kudaLogo{
+    width: 120px;
+  }
   .navLinksHolder, .signInLink, .joinKuda{
     display: none;
   }
   .mobileNavbar{
     display: flex;
   }
+  .mobileNavLink{
+    font-size: 16px;
+  }
+ 
   .menuIconHolder{
     display: flex;
   }
   .miscLinks{
     justify-content: center;
+  }
+}
+
+@media screen and (max-width:770px) {
+  .mobileNavLink{
+    font-size: 18px;
+  }
+  .mobileJoinKuda{
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .mobileNavLink>span{
+    font-size: 1.5em;
+  }
+  .kudaLogo{
+    width: 160px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .mobileNavLink>span{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .mobileNavLink>span{
+    font-size:20px;
+  }
+
+  .kudaLogo{
+    width: 180px;
   }
 }
