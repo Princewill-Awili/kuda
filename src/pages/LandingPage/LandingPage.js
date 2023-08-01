@@ -2,6 +2,7 @@ import React,{memo} from 'react'
 import './landingpage.css'
 
 import { badges } from '../../data'
+import AnimeCompA from '../../components/AnimeComponentA/AnimeCompA';
 
 const [ndicBadge,cbnBadge, appleStoreBadge, playStoreBadge] = badges;
 
@@ -30,7 +31,9 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className='secOneRight'></div>
+        <div className='secOneRight'>
+          <AnimeCompA/>
+        </div>
       </section>
       <section className='sectionTwo'>SectionTwo</section>
     </div>

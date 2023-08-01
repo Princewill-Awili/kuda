@@ -11,7 +11,8 @@ import playStoreBadge from './assets/googleplay badge.png';
 import ndicBadge from './assets/ndic badge.jpg'
 import cbnBadge from './assets/cbn badge.png'
 
-
+//images
+import kudaphone from './assets/kudaPhone.png'
 
 //icons
 import { AiFillHome as HomeIcon } from "react-icons/ai";
@@ -73,3 +74,5 @@ export const helpItems = [
 ];
 
 export const badges = [appleStoreBadge, playStoreBadge, ndicBadge, cbnBadge];
+
+export const images = [kudaphone];

@@ -1,87 +1,98 @@
-.landingpage{
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-     padding-top: 70px;
-     z-index:inherit;
+.landingpage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 15vh;
+  background-color: #fff;
+  z-index: 1000;
 }
 
-.sectionOne,.sectionTwo{
-     width: 100%;
-     height: 100vh;
-     display: flex;
+.sectionOne,
+.sectionTwo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  
 }
 
-.sectionOne{
-     flex-direction: row;
+.sectionOne {
+  flex-direction: row;
+  padding-top: 15vh;
 }
 
-.secOneLeft,.secOneRight{
-     width: 50%;
-     height: 100%;
-     display: flex;
-     align-items:center;
-     justify-content: flex-start;
+.secOneLeft,
+.secOneRight {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.secOneTxtBox{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     width: 65%;
-     margin-left: 50px;
+.secOneTxtBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  height: 100%;
+  margin-left: 50px;
 }
 
-.bigTxt{
-     font-size: 45px;
-     margin-bottom: 20px;
-     color: var(--kudaPurple);
-     font-weight: 600;
+.bigTxt {
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: var(--kudaPurple);
+  font-weight: 600;
 }
-.medTxt{
-     font-size: 18px;
-     line-height:26px;
-     color: var(--mildBlack);
-     font-weight: 500;
-}
-
-.badges{
-     display: flex;
-     width: 100%;
-     height: 100px;
-     flex-direction: column;
+.medTxt {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--mildBlack);
+  font-weight: 500;
 }
 
-.apple, .google{
-     height: 65px;
-     width: 48%;
-     margin-right: 2%;
-     border-radius: var(--mildRound);
+.badges {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  flex-direction: column;
 }
 
-.ndic, .cbn{
-     height: 30px;
+.apple,
+.google {
+  height: 65px;
+  width: 48%;
+  margin-right: 2%;
+  border-radius: var(--mildRound);
 }
 
-
-
-.topBadge, .bottomBadge{
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: row;
-     gap:5px;
+.ndic,
+.cbn {
+  height: 30px;
 }
 
-.bottomBadge{
-     margin-top: 10px;
-     justify-content: space-between;
-     padding: 0px 20px;
+.topBadge,
+.bottomBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 5px;
 }
 
+.bottomBadge {
+  margin-top: 10px;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
 
-.sideTxt{
-     color: var(--lightGray);
-     font-size: 11px;
+.sideTxt {
+  color: var(--lightGray);
+  font-size: 11px;
+}
+
+.secOneRight {
+  margin-top: -10vh;
+  padding-left: 10%;
 }
