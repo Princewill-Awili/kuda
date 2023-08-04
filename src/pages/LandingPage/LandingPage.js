@@ -1,8 +1,10 @@
 import React,{memo} from 'react'
 import './landingpage.css'
 
-import { badges } from '../../data'
+import { badges, features } from '../../data'
 import AnimeCompA from '../../components/AnimeComponentA/AnimeCompA';
+import Feature from '../../components/Feature/Feature';
+
 
 const [ndicBadge,cbnBadge, appleStoreBadge, playStoreBadge] = badges;
 
@@ -32,10 +34,14 @@ const LandingPage = () => {
           </div>
         </div>
         <div className='secOneRight'>
-          <AnimeCompA/>
+          <AnimeCompA />
         </div>
       </section>
-      <section className='sectionTwo'>SectionTwo</section>
+      <div className='features'>
+        {
+          features.map((feature,index)=> <Feature key={index} icon={feature.icon} text={feature.text}/>)
+        }
+      </div>
     </div>
   );
 }

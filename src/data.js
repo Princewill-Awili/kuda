@@ -27,7 +27,10 @@ import { BiMobile as AirtimeIcon } from "react-icons/bi";
 import { BiWifi as InternetIcon } from "react-icons/bi";
 import { BiSolidGift as GiftCardIcon } from "react-icons/bi";
 import { GiSpades as BettingIcon } from "react-icons/gi";
-import { FaMoneyCheckAlt as OverdraftIcon } from "react-icons/fa";
+import {
+  FaMoneyCheckAlt as OverdraftIcon,
+  FaNetworkWired as NetworkIcon,
+} from "react-icons/fa";
 
 import {SiBookstack as RegistrationIcon} from 'react-icons/si'
 import { GiSwipeCard as POSIcon } from "react-icons/gi";
@@ -76,3 +79,26 @@ export const helpItems = [
 export const badges = [appleStoreBadge, playStoreBadge, ndicBadge, cbnBadge];
 
 export const images = [kudaphone];
+
+export const features = [
+  {
+    icon: <KudacardIcon />,
+    text: "Order a Kuda Visa Card on the app with pickup and delivery options.",
+  },
+  {
+    icon: <BudgetIcon />,
+    text: "Enjoy cashless payment options online and offline.",
+  },
+  {
+    icon: <NetworkIcon />,
+    text: "Pay essential bills and buy gift cards easily.",
+  },
+  {
+    icon: <TransferIcon />,
+    text: "Get 25 free transfers to Nigerian banks every month.",
+  },
+  {
+    icon: <SaveIcon />,
+    text: "Save money automatically everytime you spend.",
+  },
+];
