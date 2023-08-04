@@ -1,6 +1,5 @@
 import React from 'react'
 import './feature.css'
-import {BsSendFill  as SendIcon} from 'react-icons/bs'
 
 const Feature = ({icon,text}) => {
   return (
